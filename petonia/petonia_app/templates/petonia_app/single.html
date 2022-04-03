@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="wrapper">
+            <div class="single">
+                <div class="single-img">
+                    {% if marker.photo %}
+                    <div class="single-img">
+                        <img src="{{ marker.photo.url }}" alt="Photo" class="single-img__image">
+                    </div>
+                    {% else %}
+                     <div class="single-img">
+                        <img src="{% static 'images/photo.svg' %}" alt="Photo" class="single-img__image">
+                    </div>
+                {% endif %}
+                </div>
+                <div class="single-text">
+                    <p class="single__name">{{ marker.name }}</p>
+                    <p class="single__category"><span>Категория:</span> {{ marker.search }}</p>
+                    <p class="single__animal"><span>Животное:</span> {{ marker.animal }}</p>
+                    <p class="single__phone"><span>Телефон:</span> {{ marker.telephone }}</p>
+                    <p class="single__location">{{ marker.street }}, {{ marker.city }}, {{ marker.region }}, {{ marker.country }}</p>
+                    {% if marker.comment %}
+                    <p class="single__info-title">Дополнительная информация:</p>
+                    <p class="single__info">{{ marker.comment }}</p>
+                    {% endif %}
+                    <p class="single__view"><i class="fa fa-eye" aria-hidden="true"></i> {{ marker.views }}</p>
+                    <div class="single-btn">
+                        <a href="{% url 'map' %}" class="single-btn__link">Открыть карту</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

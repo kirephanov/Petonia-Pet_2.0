@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load cache %}
+{% cache 1800 index %}
+	<article class="block-main">
+		<div class="wrapper">
+			<div class="block01">
+				<div class="block01-text">
+					<h1 class="block__h1">Наша цель</h1>
+					<p class="block-description">Снизить количество бездомных животных на улицах городов</p>
+				</div>
+				<div class="block01-img">
+					<img src="{% static 'images/dog01.png' %}" alt="Dog">
+				</div>
+				<div class="block01-img-medium">
+					<img src="{% static 'images/cat-medium.png' %}" alt="Cat">
+				</div>
+				<div class="block01-img-small">
+					<img src="{% static 'images/dog-small.png' %}" alt="Dog">
+				</div>
+			</div>
+		</div>
+	</article>
+	<section class="block-main">
+		<div class="wrapper">
+			<div class="block02">
+				<div class="block02-img">
+					<img src="{% static 'images/cat01.png' %}" alt="Cat">
+				</div>
+				<div class="block02-text">
+					<h2 class="block__h2">О проекте</h2>
+					<p class="block02-description">"Petonia – Поиск питомцев" – это студенческая организация по поиску бездомных животных: кошек и собак, созданная в сентябре 2021 года.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block-main">
+		<div class="wrapper">
+			<div class="block03">
+				<div class="block03-text">
+					<h2 class="block__h2">Как это работает?</h2>
+					<p class="block-description">Вы заполнили форму. На сайте сразу появились объявления, а также метка на интерактивной карте.</p>
+				</div>
+				<div class="block03-img">
+					<img src="{% static 'images/dog02.png' %}" alt="Dog">
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="wrapper">
+		<div class="connect">
+			<div class="connect-text">
+				<p class="connect-text__title">Обратная связь</p>
+				<p class="connect-text__description">Возникли вопросы? Желаете помочь? Обратитесь к нам!</p>
+			</div>
+			<div class="connect-mail">
+				<p class="connect-mail__address">petoniapets@mail.mail</p>
+				<a href="mailto:petoniapets@mail.mail" class="mail-btn">Связаться с нами</a>
+			</div>
+		</div>
+	</div>
+	<section class="block-bottom">
+		<div class="wrapper">
+			<div class="block04">
+				<p class="block04__title">Спасибо, что помогаете!</p>
+				<div class="block04-img">
+					<img src="{% static 'images/dog03.png' %}" alt="Dog">
+				</div>
+			</div>
+		</div>
+	</section>
+{% endcache %}
+{% endblock %}

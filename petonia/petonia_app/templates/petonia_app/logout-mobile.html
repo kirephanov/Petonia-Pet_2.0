@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <div class="wrapper">
+            <div class="bg-mobile-login">
+                <div class="mobile-login__icon">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </div>
+                <div class="mobile-login__title">
+                    {% if request.user.is_authenticated %}
+                    <p class="mobile-login__title-text">{{ user.username }}</p>
+                    {% endif %}
+                </div>
+                <div class="mobile-login__btn-logout">
+                    <a href="{% url 'logout' %}" class="mobile-login__btn-logout-link">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

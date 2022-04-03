@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="filter-menu">
+        {% load cache %}
+        {% cache 600 sidebar %}
+        <div class="wrapper">
+            <div class="filter-nav" id="myFilter-nav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="{% url 'board' %}" class="filter__link">Все объявления</a>
+                <a href="{% url 'popular' %}" class="filter__link">Популярно</a>
+                <p class="filter__title">Область</p>
+                <div class="filter__link-container">
+                    <div class="dropdown">
+                        <button onclick="dropdownFunction()" class="filter__dropdown-btn">Выбрать <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                        <div id="filterDropdown" class="dropdown-content__region">
+                            {% for item in regions %}
+                            <a href="{% url 'region' item.pk %}" class=".dropdown-content__link">{{ item.reg_name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <p class="filter__title">Категория</p>
+                <div class="filter__link-container">
+                    <div class="dropdown">
+                        <button onclick="dropdownFunctionCategory()" class="filter__dropdown-btn">Выбрать <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                        <div id="filterDropdownCategory" class="dropdown-content">
+                            {% for item in categories %}
+                            <a href="{% url 'category' item.pk %}" class=".dropdown-content__link">{{ item.looking_for }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <p class="filter__title">Животное</p>
+                <div class="filter__link-container">
+                    <div class="dropdown">
+                        <button onclick="dropdownFunctionAnimal()" class="filter__dropdown-btn">Выбрать <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                        <div id="filterDropdownAnimal" class="dropdown-content">
+                            {% for item in animals %}
+                            <a href="{% url 'animal' item.pk %}" class=".dropdown-content__link">{{ item.animal_name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-btn__container">
+                <span onclick="openNav()" class="filter-btn"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        {% endcache %}
+    </div>
+
+    <section class="board">
+        <div class="wrapper">
+            <div class="board-grid">
+                {% for item in page_obj %}
+                <div class="board-grid-item">
+                    <div class="board-card">
+                        <div class="board-card__top">
+                            <div class="board-card__top-template-photo">
+                                <div class="board-card__top-photo">
+                                    {% if item.photo %}
+                                    <img src="{{ item.photo.url }}" alt="Photo" class="board-card__top-photo-img">
+                                    {% else %}
+                                    <img src="{% static 'images/photo.svg' %}" alt="Photo" class="board-card__top-photo-img">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="board-card__bottom">
+                            <div class="board-card__bottom-text">
+                                <p class="board-card__bottom__name">{{ item.name }}</p>
+                                <p class="board-card__bottom__category"><span>Категория: </span>{{ item.search }}</p>
+                                <p class="board-card__bottom__animal"><span>Животное: </span>{{ item.animal }}</p>
+                                <div class="board-card__bottom__btn">
+                                    <a href="{% url 'post' item.pk %}" class="board-card__bottom__link">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="board-card__bottom-footer">
+                                <p class="board-card__bottom__time">{{ item.created_at|date:"Y-m-d H:i" }}</p>
+                                <p class="board-card__bottom__views"><i class="fa fa-eye" aria-hidden="true"></i> {{ item.views }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <nav class="my-pagination-center">
+        <div class="wrapper">
+            <ul class="my-pagination d-flex justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">«</a></li>
+                {% endif%}
+                {% for p in page_obj.paginator.page_range %}
+                {% if page_obj.number == p %}
+                <li><a class="active-pagination" href="?page={{ p }}">{{ p }}</a></li>
+                {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                <li><a href="?page={{ p }}">{{ p }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}">»</a></li>
+                {% endif%}
+            </ul>
+        </div>
+    </nav>
+
+<script type="text/javascript" src="{% static 'js/filter-menu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dropdown.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dropdown_animal.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dropdown_category.js' %}"></script>
+{% endblock %}

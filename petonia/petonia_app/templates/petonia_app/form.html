@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="wrapper">
+			<div class="grid-form">
+				<div class="grid-form-item">
+					<label for="" class="form-label">Категория</label>
+					<div class="form-item">
+						{{ form.search }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Питомец</label>
+					<div class="form-item">
+						{{ form.animal }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Имя</label>
+					<div class="form-item">
+						{{ form.name }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Телефон</label>
+					<div class="form-item">
+						{{ form.telephone }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Местоположение</label>
+					<div class="form-item">
+						{{ form.street }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Город</label>
+					<div class="form-item">
+						{{ form.city }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Область</label>
+					<div class="form-item">
+						{{ form.region }}
+					</div>
+				</div>
+				<div class="grid-form-item">
+					<label for="" class="form-label">Страна</label>
+					<div class="form-item">
+						{{ form.country }}
+					</div>
+				</div>
+				<div class="grid-form-item grid-form-item__textarea">
+					<label for="" class="form-label">Комментарий</label>
+					<div class="form-item">
+						{{ form.comment }}
+					</div>
+				</div>
+				<div class="grid-form-item grid-form-item__file">
+					<label for="" class="form-label">Фотография</label>
+					<div class="form-item input_file">
+						 {{ form.photo }}
+					</div>
+				</div>
+			</div>
+			<div class="form-error">
+				<p class="form-error__message">{{ error }}</p>
+			</div>
+			<div class="form-btn">
+				<button class="btn-reset btn-reset__large" type="reset">Отмена</button>
+				<button class="btn-reset btn-reset__mobile" type="reset"><i class="fa fa-times" aria-hidden="true"></i></button>
+				<button class="btn-send btn-send__large" type="submit">Отправить</button>
+				<button class="btn-send btn-send__mobile" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</form>
+{% endblock %}

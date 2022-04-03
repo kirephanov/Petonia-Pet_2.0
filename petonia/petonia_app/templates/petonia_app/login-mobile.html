@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <div class="wrapper">
+            <div class="bg-mobile-login">
+                <div class="mobile-login__icon">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </div>
+                <div class="mobile-login__title">
+                    <p class="mobile-login__title-text">Авторизация</p>
+                </div>
+                <div class="mobile-login__btn-login">
+                    <a href="{% url 'login' %}" class="mobile-login__btn-login-link">Войти</a>
+                </div>
+                <div class="mobile-login__btn-reg">
+                    <a href="{% url 'register' %}" class="mobile-login__btn-reg-link">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

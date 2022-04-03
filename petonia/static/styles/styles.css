@@ -1,0 +1,1309 @@
+:root {
+	--blue: #6E65EB;
+	--green: #7FE976;
+	--dark: #5A5A5A;
+	--grey: #C4C4C4;
+	--red: #EB5656;	
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+}
+.wrapper {
+	max-width: 1180px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0 auto;
+}
+.mobile-nav {
+	display: none;
+}
+/******************* Верхний уровень навигации ****************************/
+.header {
+	background-color: var(--blue);
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-top__link-item {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+}
+.login {
+	padding-right: 17px;
+	padding-bottom: 5px;
+	border-right: 1px solid #fff;
+	color: #fff;
+	transition: 0.2s ease color;
+}
+.login:hover {
+	color: var(--green);
+}
+.user {
+	padding-right: 17px;
+	padding-bottom: 5px;
+	border-right: 1px solid #fff;
+}
+.logout {
+	margin-left: 17px;
+	color: #fff;
+	transition: 0.2s ease color;
+}
+.logout:hover {
+	color: var(--red);
+}
+.reg {
+	margin-left: 17px;
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	padding: 16px;
+	background-color: var(--green);
+	color: #fff;
+	transition: 0.3s ease background-color, 0.3s ease color;
+}
+.reg:hover {
+	background-color: #fff;
+	color: #000
+}
+/******************** Нижний уровень навигации ***************************************/
+.header-bottom {
+	background-color: #fff;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.nav {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 30px 15px;
+}
+.nav-item {
+	list-style-type: none;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.nav-link {
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	transition: 0.2s ease color;
+}
+.nav-link:hover {
+	color: var(--blue);
+}
+/******************** Первый блок главной ***************************************/
+.block01 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 110px;
+}
+.block01-text {
+	max-width: 500px;
+}
+.block__h1 {
+	color: #000;
+	font-size: 72px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.block-description {
+	color: var(--dark);
+	font-size: 40px;
+	margin-top: 0;
+}
+.block01-img-medium {
+	display: none;
+}
+.block01-img-small {
+	display: none;
+}
+/******************** Второй блок главной ***************************************/
+.block02 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 113px;
+}
+.block02-text {
+	max-width: 500px;
+}
+.block__h2 {
+	color: #000;
+	font-size: 72px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.block02-description {
+	color: var(--dark);
+	font-size: 36px;
+	margin-top: 0;
+}
+/******************** Третий блок главной ***************************************/
+.block03 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 113px;
+}
+.block03-text {
+	max-width: 500px;
+}
+.block__h2 {
+	color: #000;
+	font-size: 72px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+/******************** Блок обратной связи ***************************************/
+.connect {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--blue);
+	border-radius: 32px;
+	margin-top: 113px;
+	padding: 80px 105px;
+}
+.connect-text__title {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.connect-text__description {
+	color: #fff;
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 445px;
+} 
+.connect-mail {
+	text-align: center;
+}
+.connect-mail__address {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 16px;
+	padding-bottom: 20px;
+}
+.mail-btn {
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 500;
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	padding: 17px 26px;
+	background-color: var(--green);
+	transition: 0.3s ease background-color,0.3s ease color;
+}
+.mail-btn:hover {
+	background-color: #fff;
+	color: #000
+}
+/******************** Четвертый блок главной ***************************************/
+.block04 {
+	margin-top: 113px;
+}
+.block04__title {
+	color: #000;
+	font-size: 72px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 164px;
+}
+.block04-img {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	max-height: 372px;
+}
+/************************** Футер *************************************************/
+.footer {
+	margin-top: 0;
+	background-color: var(--blue);
+	padding-top: 30px;
+}
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-top__title {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.materials-list {
+	padding-left: 0;
+}
+.materials-list__item {
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: 5px;
+	padding-left: 0;
+}
+.materials-list__item > a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	transition: 0.2s ease color;
+}
+.materials-list__item > a:hover {
+	color: var(--green);
+}
+.about__description {
+	color: #fff;
+	max-width: 400px;
+	margin: 0;
+}
+.about__description > span {
+	color: var(--green);
+}
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid var(--green);
+	margin-top: 40px;
+	padding-top: 30px;
+	padding-bottom: 70px;
+}
+.footer-bottom__text {
+	color: #fff;
+	font-size: 18px;
+}
+.social-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style-type: none;
+	padding-left: 0;
+}
+.social-list-item {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+.social-list-item__link {
+	color: #fff;
+	font-size: 24px;
+	transition: 0.2s ease color;
+}
+.social-list-item__link:hover {
+	color: var(--green);
+}
+
+/************************************************************************************
+ ***********************************Добавить объявление******************************
+ ***********************************************************************************/
+
+ .grid-form {
+ 	display: grid;
+ 	grid-template-columns: repeat(2, 1fr);
+ 	grid-gap: 68px 113px;
+ 	margin-top: 110px;
+ }
+ .grid-form-item__textarea {
+ 	grid-column: 1 / 3;
+ }
+ .grid-form-item__file {
+ 	grid-column: 1 / 3;
+ }
+ .form-label {
+ 	font-size: 36px;
+ }
+ .form-item {
+ 	padding-top: 26px;
+ }
+ .form-select {
+ 	font-size: 24px;
+ 	padding: 8px 20px;
+ 	width: 100%;
+ 	border: 1px solid var(--dark);
+ 	border-radius: 32px;
+ 	appearance: none;
+	background-image: url(../images/arrow-select.svg);
+	background-repeat: no-repeat;
+	background-position: 96% 45%;
+
+ }
+ .form-input {
+ 	font-size: 24px;
+ 	padding: 8px 20px;
+ 	width: 100%;
+ 	border: 1px solid var(--dark);
+ 	border-radius: 32px;
+ 	box-sizing: border-box;
+ }
+.form-textarea {
+	font-size: 24px;
+ 	padding: 8px 20px;
+ 	width: 100%;
+ 	border: 1px solid var(--dark);
+ 	border-radius: 32px;
+ 	box-sizing: border-box;	
+}
+.file_input {
+	padding: 8px;
+	font-size: 26px;
+	color: var(--dark);
+}
+.form-error {
+	text-align: center;
+}
+.form-error__message {
+	color: var(--red);
+	font-size: 24px;
+	font-weight: 500;
+}
+.form-btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 32px;
+	margin-bottom: 135px;	
+}
+.btn-reset__mobile {
+	display: none;
+}
+.btn-send__mobile {
+	display: none;
+}
+.btn-reset {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	background-color: var(--red);
+	border: 3px solid var(--red);
+	border-radius: 32px;
+	padding: 18px 43px;
+	transition: 0.3s ease color, 0.3s ease background-color;
+	cursor: pointer;
+}
+.btn-reset:hover {
+	color: #000;
+	background-color: #fff;
+}
+.btn-send {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	background-color: var(--green);
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	padding: 18px 43px;
+	transition: 0.3s ease color, 0.3s ease background-color;
+	cursor: pointer;
+}
+.btn-send:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+/************************************************************************************
+ ******************************** Открытое объявление *******************************
+ ***********************************************************************************/
+
+.single {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 110px;
+}
+.single-img__image {
+	max-width: 465px;
+	max-height: 565px;
+	text-align: center;
+	border-radius: 16px;
+}
+.single-text {
+	max-width: 525px;
+}
+.single__name {
+	color: #000;
+	font-size: 36px;
+	font-weight: 500;
+	margin-top: 0;
+}
+.single__category {
+	color: #000;
+	font-size: 36px;
+}
+.single__category > span {
+	color: var(--blue);
+	font-size: 36px;
+}
+.single__animal {
+	color: #000;
+	font-size: 36px;
+}
+.single__animal > span {
+	color: var(--blue);
+	font-size: 36px;
+}
+.single__phone {
+	color: #000;
+	font-size: 36px;
+}
+.single__phone > span {
+	color: var(--blue);
+	font-size: 36px;
+}
+.single__location {
+	color: #000;
+	font-size: 36px;
+	font-weight: 500;
+}
+.single__info-title {
+	color: var(--blue);
+	font-size: 36px;
+	margin-bottom: 14px;
+}
+.single__info {
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 35px;
+}
+.single__view {
+	color: var(--grey);
+	font-size: 24px;
+}
+.single-btn {
+	margin-top: 50px;
+	margin-bottom: 150px;
+}
+.single-btn__link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 500;
+	background-color: var(--green);
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	padding: 18px 170px;
+	text-align: center;
+	transition: 0.3s ease color, 0.3s ease background-color;
+}
+.single-btn__link:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+/************************************************************************************
+ **************************** Мобильная авторизация *********************************
+ ***********************************************************************************/
+
+.bg-mobile-login {
+	background-color: #fff;
+	border-radius: 32px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	margin-top: 110px;
+	margin-bottom: 135px;
+	padding: 25px 30px;
+}
+.mobile-login__icon {
+	color: var(--grey);
+	font-size: 72px;
+}
+.mobile-login__title-text {
+	font-size: 40px;
+	font-weight: 700;
+}
+.mobile-login__btn-login {
+	margin-bottom: 60px;
+	width: 100%;
+}
+.mobile-login__btn-login-link {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	border: 3px solid var(--blue);
+	border-radius: 32px;
+	background-color: var(--blue);
+	padding: 13px 80px;
+	transition: 0.3s ease color, 0.3s ease background-color;
+}
+.mobile-login__btn-login-link:hover {
+	color: #000;
+	background-color: #fff;
+}
+.mobile-login__btn-reg {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+.mobile-login__btn-reg-link {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	background-color: var(--green);
+	padding: 13px 53px;
+	transition: 0.3s ease color, 0.3s ease background-color;
+}
+.mobile-login__btn-reg-link:hover {
+	color: #000;
+	background-color: #fff;
+}
+.mobile-login__btn-logout {
+	margin-top: 120px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+.mobile-login__btn-logout-link {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	border: 3px solid var(--red);
+	border-radius: 32px;
+	background-color: var(--red);
+	padding: 13px 80px;
+	transition: 0.3s ease color, 0.3s ease background-color;
+}
+.mobile-login__btn-logout-link:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+/************************************************************************************
+ ********************************* Объявления ***************************************
+ ***********************************************************************************/
+
+.filter-nav {
+	height: 100%; /* 100% всей ширины */
+	width: 0; /* 0 width - измените с помощью JavaScript */
+	position: fixed; /* Оставаться на месте */
+	z-index: 1; /* Оставаться вверху */
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25);
+	overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+	padding-top: 60px; /* Поместите контент на 60px сверху */
+	transition: 0.5s; /* 0,5-секундный эффект перехода для скольжения в боковой навигации */
+}
+.filter__link {
+	padding: 8px 8px 8px 0;
+	margin-left: 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #000;
+	display: block;
+	transition: 0.3s ease color;
+}
+.filter__link:hover {
+	color: var(--green);
+}
+.filter-nav .closebtn {
+	color: var(--dark);
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	transition: 0.3s ease color;
+}
+.filter-nav .closebtn:hover {
+	color: var(--red);
+}
+.filter__title {
+	margin-left: 32px;
+	margin-bottom: 0;
+	margin-top: 30px;
+	padding: 8px 8px 8px 0;
+	font-size: 25px;
+	font-weight: 500;
+	color: var(--blue);
+}
+.filter__dropdown-btn {
+	padding: 8px 8px 8px 0;
+	margin-left: 32px;
+	background-color: #fff;
+	border: none;
+	font-size: 25px;
+	color: #000;
+	display: block;
+	cursor: pointer;
+	transition: 0.3s ease color;
+}
+.filter__dropdown-btn:hover {
+	color: var(--green);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F8F9FB;
+    min-width: 160px;
+    overflow: auto;
+    height: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content__region {
+    display: none;
+    position: absolute;
+    background-color: #F8F9FB;
+    min-width: 160px;
+    overflow: auto;
+    height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000;
+    background-color: #F8F9FB;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s ease color, 0.2s ease background-color;
+}
+
+.dropdown-content a:hover {
+	color: #fff;
+	background-color: var(--green);
+}
+
+.dropdown-content__region a {
+    color: #000;
+    background-color: #F8F9FB;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s ease color, 0.2s ease background-color;
+}
+
+.dropdown-content__region a:hover {
+	color: #fff;
+	background-color: var(--green);
+}
+.show {
+	display: block;
+}
+.filter-btn__container {
+	margin-top: 50px;
+	margin-bottom: 55px;
+}
+.filter-btn {
+	color: var(--dark);
+	font-size: 50px;
+	border: 2px solid rgba(90, 90, 90, 0.64);
+	border-radius: 10px;
+	padding: 0px 7px;
+	cursor: pointer;
+	transition: 0.3s ease color, 0.3s ease border;
+}
+.filter-btn:hover {
+	color: var(--blue);
+	border: 2px solid rgba(110, 101, 235, 0.64);
+}
+
+/**************************** Карточки объявлений **********************************/
+.board-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+ 	grid-gap: 60px 10px;
+ 	margin-bottom: 100px;
+ 	justify-content: center;
+}
+.board-card {
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 16px;
+	padding: 15px;
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	max-height: 900px;
+	margin-right: 0;
+}
+.board-card__top-template-photo {
+	text-align: center;
+	width: 100%;
+	height: 627px;
+	background-color: #fff;
+	border-radius: 16px;
+}
+.board-card__top-photo {
+	width: 100%;
+	height: 100%;
+	max-height: 627px;
+}
+.board-card__top-photo-img {
+	width: 100%;
+	max-height: 627px;
+	border-radius: 16px;
+}
+.board-card__bottom__name {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.board-card__bottom__category {
+	color: #000;
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.board-card__bottom__category > span {
+	color: var(--blue);
+}
+.board-card__bottom__animal {
+	color: #000;
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 25px;
+}
+.board-card__bottom__animal > span {
+	color: var(--blue);
+}
+.board-card__bottom__btn {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.board-card__bottom__link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 500;
+	padding: 9px 165px;
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	background-color: var(--green);
+	width: 100%;
+	transition: 0.3s ease color, 0.3s ease background-color;
+}
+.board-card__bottom__link:hover {
+	color: #000;
+	background-color: #fff;
+}
+.board-card__bottom-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.board-card__bottom__time {
+	color: var(--grey);
+	font-size: 18px;
+	margin: 0;
+}
+.board-card__bottom__views {
+	color: var(--grey);
+	font-size: 18px;
+	margin: 0;
+}
+
+/**************************** Пагинация ***************************************/
+.my-pagination-center {
+    text-align: center;
+    margin-bottom: 130px;
+}
+ul.my-pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul.my-pagination li {
+	display: inline;
+}
+
+ul.my-pagination li a {
+	font-size: 20px;
+    color: #000;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: 0.3s ease background-color;
+}
+
+ul.my-pagination li a.active-pagination {
+    background-color: var(--blue);
+    color: white;
+    border-radius: 8px;
+}
+
+ul.my-pagination li a:hover:not(.active-pagination) {
+	background-color: #ddd;
+}
+
+/************************************************************************************
+ *************************** Регистрация \ Авторизация ******************************
+ ***********************************************************************************/
+ .register {
+ 	margin-top: 110px;
+ 	margin-bottom: 135px;
+ }
+ .authorization {
+ 	margin-top: 110px;
+ 	margin-bottom: 135px;
+ }
+.authorization-card {
+	background-color: #fff;
+	border-radius: 32px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	padding: 30px 110px;
+	max-width: 735px;
+	margin: 0 auto;
+}
+.authorization__title {
+	font-size: 64px;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 94px;
+	text-align: center;
+}
+.authorization__form {
+	margin: 0 auto;
+}
+.authorization__form-label {
+	display: block;
+	font-size: 36px;
+}
+.authorization__form-input {
+	display: block;
+	font-size: 18px;
+ 	padding: 8px 20px;
+ 	width: 100%;
+ 	border: 1px solid var(--dark);
+ 	border-radius: 32px;
+ 	box-sizing: border-box;
+ 	margin-bottom: 40px;
+}
+.authorization-btn {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	background-color: var(--green);
+	border: 3px solid var(--green);
+	border-radius: 32px;
+	text-align: center;
+	width: 100%;
+	padding: 18px 30px;
+	margin-top: 40px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: 0.3s ease color, 0.3s ease background-color;
+}
+.authorization-btn:hover	{
+	color: #000;
+	background-color: #fff;
+}
+.authorization__form-description {
+	font-size: 18px;
+	margin-top: 80px;
+	margin-bottom: 0;
+	text-align: center;
+}
+.authorization__form-description .authorization__form-description-link {
+	color: var(--blue);
+	transition: 0.2s ease color;
+}
+.authorization__form-description .authorization__form-description-link:hover {
+	color: var(--green);
+}
+/************************************************************************************
+ ************************************ Адаптив ***************************************
+ ***********************************************************************************/
+@media (max-width: 1200px) {
+	.block04-img {
+		display: none;
+	}
+	.single__name {
+		margin-top: 50px
+	}
+
+	/******************************** Объявления *************************************/
+	.board-grid {
+		display: block;
+	}
+	.board-grid-item {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px
+	}
+}
+@media (max-width: 1080px) {
+	.single {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+@media (max-width: 1025px) {
+	.header-top {
+		display: block;
+		text-align: center;
+	}
+	.header-top__link {
+		display: none;
+	}
+	.header-bottom {
+		display: none;
+	}
+	.mobile-nav {
+		display: block;
+    	overflow: hidden;
+    	background-color: #fff;
+    	position: fixed;
+    	bottom: 0;
+    	width: 100%;
+    	border-top: 1px solid var(--grey);
+	}
+	.mobile-nav__ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.mobile-nav__li {
+		list-style-type: none;
+
+	}
+	.mobile-nav__link {
+		color: var(--blue);
+		font-size: 35px;
+	}
+	.mobile-nav__link:hover {
+		color: var(--green);
+	}
+	.block01 {
+		flex-flow: column;
+		text-align: center;
+	}
+	.block01-text {
+		max-width: none;
+	}
+	.block-description {
+		margin-bottom: 110px;
+	}
+	.block02 {
+		flex-flow: column-reverse;
+		text-align: center;
+	}
+	.block02-text {
+		max-width: none;
+	}
+	.block03 {
+		flex-flow: column;
+		text-align: center;
+	}
+	.block03-img {
+		display: none
+	}
+}
+@media (max-width: 900px) {
+	.connect {
+		flex-direction: column;
+		text-align: center;
+	}
+	.connect-text__description {
+		padding-bottom: 30px;
+	}
+	.footer-top {
+		flex-flow: column-reverse;
+	}
+	.about__description {
+		text-align: center;
+		max-width: none;
+		margin-bottom: 30px;
+	}
+
+	/******************* Добавить объявление **********************/
+	.grid-form {
+		display: block;
+	}
+	.grid-form-item {
+		margin-top: 30px;
+	}
+}
+@media (max-width: 700px) {
+	.block01-img {
+		display: none;
+	}
+	.block01-img-medium {
+		display: block;
+	}
+	.block02-img {
+		display: none;
+	}
+
+	/******************* Регистрация \ Авторизация *******************/
+	.authorization-card {
+		padding: 30px 50px;
+	}
+	.authorization__title {
+		font-size: 56px;
+		margin-bottom: 60px;
+	}
+}
+@media (max-width: 600px) {
+	.file_input {
+		font-size: 22px;
+		width: 350px;
+		display: block
+	}
+
+	/******************* Открытое объявление **********************/
+	.single-btn {
+		text-align: center;
+	}
+	.single-btn__link {
+		font-size: 18px;
+		padding: 18px 100px;
+	}
+
+	/******************************** Объявления *************************************/
+	.board-card__bottom__link {
+		padding: 9px 80px;
+	}
+	.board-card__top-template-photo {
+		height: 450px;
+	}
+	.board-card__top-photo {
+		text-align: center;
+		max-height: 450px;
+	}
+	.board-card__top-photo-img {
+		max-width: 80%;
+		max-height: 450px;
+	}
+}
+@media (max-width: 515px) {
+	.mobile-nav__link {
+		font-size: 30px;
+	}
+	.connect {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.connect-mail__address {
+		display: none;
+	}
+	.block04__title {
+		font-size: 40px
+	}
+	.footer-bottom {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	/******************* Добавить объявление **********************/
+	.btn-reset {
+		padding: 18px 25px;
+	}
+	.btn-send {
+		padding: 18px 25px;
+	}
+	.btn-reset__mobile {
+		display: block;
+	}
+	.btn-send__mobile {
+		display: block;
+	}
+	.btn-reset__large {
+		display: none;
+	}
+	.btn-send__large {
+		display: none;
+	}
+
+	/******************* Открытое объявление **********************/
+	.single-img__image {
+		max-width: 350px;
+	}
+	.single__name {
+		font-size: 24px;
+	}
+	.single__category {
+		font-size: 24px;
+	}
+	.single__category > span {
+		font-size: 24px;
+	}
+	.single__animal {
+		font-size: 24px;
+	}
+	.single__animal > span {
+		font-size: 24px;
+	}
+	.single__phone {
+		font-size: 24px;
+	}
+	.single__phone > span {
+		font-size: 24px;
+	}
+	.single__location {
+		font-size: 24px;
+	}
+	.single__info-title {
+		font-size: 24px;
+	}
+	.single__info {
+		font-size: 16px;
+	}
+
+	/******************* Регистрация \ Авторизация *******************/
+	.authorization__title {
+		font-size: 36px;
+		margin-bottom: 45px;
+	}
+	.authorization__form-label {
+		font-size: 24px;
+	}
+	.authorization__form-input {
+ 		margin-bottom: 30px;
+	}
+}
+@media screen and (max-height: 450px) {
+	.filter-nav {
+		padding-top: 15px;
+	}
+	.filter__link {
+		font-size: 18px;
+	}
+}
+@media (max-width: 420px) {
+	.block__h1 {
+		font-size: 40px;
+	}
+	.block01-img-medium {
+		display: none;
+	}
+	.block01-img-small {
+		display: block;
+	}
+	.block__h2 {
+		font-size: 40px;
+	}
+	.block-description {
+		font-size: 24px
+	}
+	.block02-description {
+		font-size: 24px
+	}
+
+	/******************* Добавить объявление **********************/
+	 .grid-form {
+ 		margin-top: 50px;
+ 	}
+	.form-label {
+		font-size: 24px;
+	}
+	.form-select {
+		font-size: 18px;
+	}
+	.form-input {
+		font-size: 18px;
+	}
+	.file_input {
+		width: 250px;
+	}
+
+	/******************* Открытое объявление **********************/
+	.single {
+		margin-top: 50px
+	}
+	.single-img__image {
+		max-width: 300px;
+	}
+	.single-btn__link {
+		padding: 18px 20px;
+	}
+
+	/******************* Мобильная авторизация **********************/
+	.bg-mobile-login {
+		margin-top: 50px
+	}
+	.mobile-login__title-text {
+		font-size: 32px
+	}
+
+	/******************************** Объявления *************************************/
+	.board-card__bottom__link {
+		padding: 9px 40px;
+	}
+	.board-card__top-photo-img {
+		max-width: 100%;
+		max-height: 450px;
+	}
+
+	/******************* Регистрация \ Авторизация *******************/
+	.authorization__title {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+	.authorization__form-label {
+		font-size: 18px;
+	}
+	.authorization-btn {
+		padding: 18px 10px;
+	}
+}
+@media (max-width: 330px) {
+	.connect-text__title {
+	font-size: 24px;
+	}
+	.connect-text__description {
+	font-size: 16px;
+	} 
+	.mail-btn {
+	font-size: 16px;
+	border-radius: 32px;
+	padding: 10px 16px;
+	}
+
+	/******************* Открытое объявление **********************/
+	.single-img__image {
+		max-width: 250px;
+	}
+
+	/******************* Мобильная авторизация **********************/
+	.bg-mobile-login {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	/******************************** Объявления *************************************/
+	.board-card__top-template-photo {
+		height: 365px;
+	}
+	.board-card__top-photo {
+		max-height: 365px;
+	}
+	.board-card__top-photo-img {
+		max-height: 365px;
+	}
+
+	/******************* Регистрация \ Авторизация *******************/
+	.authorization-card {
+		padding: 30px 10px;
+	}
+	.authorization__title {
+		font-size: 22px;
+		margin-bottom: 40px;
+	}
+	.authorization__form-label {
+		font-size: 18px;
+	}
+	.authorization-btn {
+		font-size: 18px;
+		padding: 18px 10px;
+	}
+}

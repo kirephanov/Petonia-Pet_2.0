@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="authorization">
+        <div class="wrapper">
+            <div class="authorization-card">
+                <p class="authorization__title">Авторизация</p>
+                <div class="authorization__form">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="authorization-btn" type="submit">Войти</button>
+                    </form>
+                    <p class="authorization__form-description">Еще нет аккаунта? <span><a href="{% url 'register' %}" class="authorization__form-description-link">Присоединяйся к нам!</a></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
